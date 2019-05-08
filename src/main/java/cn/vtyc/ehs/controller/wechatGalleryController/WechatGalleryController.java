@@ -42,6 +42,7 @@ public class WechatGalleryController extends BaseController {
 //        System.out.println(wechatInfoDao.selectWechatInfoByType(type));
         model.addAttribute("info",wechatInfoDao.selectWechatInfoByType(type) );
         model.addAttribute("images",wechatGalleryDao.selectWechatGalleryByType(type) );
+        model.addAttribute("carousels",wechatInfoDao.selectWechatInfoByType(type).getCarousel().split("\\|"));
         return "/weChatGallery/gallery";
     }
 
@@ -55,7 +56,7 @@ public class WechatGalleryController extends BaseController {
     public Result list(@RequestParam Integer nums,@RequestParam Integer type){
         List<WechatGallery> wechatGalleries = new ArrayList<>();
         for(int i=1;i<=nums;i++){
-            WechatGallery wechatGallery = new WechatGallery("type"+type+"/"+i+"s.jpg","type"+type+"/"+i+".jpg",type);
+            WechatGallery wechatGallery = new WechatGallery("type"+type+"/"+i+"s.JPG","type"+type+"/"+i+".JPG",type);
             wechatGalleries.add(wechatGallery);
         }
         wechatGalleryDao.insertList(wechatGalleries);

@@ -8,4 +8,5 @@ public class WechatInfo extends BaseEntity {
     private String metaTitle;
     private String title;
     private String content;
+    private String carousel;
 }
