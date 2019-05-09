@@ -23,9 +23,13 @@
                 <div class="ibox float-e-margins">
                     <div class="carousel slide" id="carousel2">
                         <ol class="carousel-indicators">
-                            <li data-slide-to="0" data-target="#carousel2"  class="active"></li>
-                            <li data-slide-to="1" data-target="#carousel2"></li>
-                            <li data-slide-to="2" data-target="#carousel2" class=""></li>
+                        <#list carousels as carousel>
+                                <#if carousel_index==0>
+                                        <li data-slide-to="${carousel_index}" data-target="#carousel2"  class="active"></li>
+                                <#else >
+                                     <li data-slide-to="${carousel_index}" data-target="#carousel2"></li>
+                                </#if>
+                            </#list>
                         </ol>
                         <div class="carousel-inner">
 
@@ -40,11 +44,6 @@
                                             <img alt="image"  class="img-responsive" src="/picture/${carousel}">
                                         </div>
                                     </#if>
-
-                                <#--<div class="carousel-caption">-->
-                                <#--<p>This is simple caption 1</p>-->
-                                <#--</div>-->
-
                             </#list>
                             <#--<div class="item active">-->
                                 <#--<img alt="image"  class="img-responsive" src="/picture/type1/p_big1.jpg">-->
