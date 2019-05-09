@@ -74,8 +74,9 @@
                     </div>
                     <div class="ibox-content">
 
-                        <h2>${info.title}</h2>
-                        <p>
+                        <#--<h3>${info.title}</h3>-->
+                        <p style="font-size: 16px">${info.title}</p>
+                        <p  style="font-size: 13px">
                             <#--<strong>照片墙</strong>这是一个照片墙，里面有很多信息，你可以看一下-->
                             <#--<a href="https://github.com/blueimp/Gallery/blob/master/README.md" target="_blank">https://github.com/blueimp/Gallery/blob/master/README.md</a>-->
                             ${info.content}
