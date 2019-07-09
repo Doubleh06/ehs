@@ -4,20 +4,15 @@ package cn.vtyc.ehs.service;
 import cn.vtyc.ehs.core.AbstractService;
 import cn.vtyc.ehs.core.BaseDao;
 import cn.vtyc.ehs.core.jqGrid.JqGridParam;
-import cn.vtyc.ehs.dao.AccidentTypeDao;
-import cn.vtyc.ehs.dao.EmailDao;
-import cn.vtyc.ehs.dto.AccidentTypeJqGridParam;
+import cn.vtyc.ehs.dao.first.EmailDao;
 import cn.vtyc.ehs.dto.EhsJqGridParam;
 import cn.vtyc.ehs.dto.EmailJqGridParam;
-import cn.vtyc.ehs.entity.AccidentType;
-import cn.vtyc.ehs.entity.Action;
 import cn.vtyc.ehs.entity.Email;
 import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.net.Inet4Address;
 import java.util.List;
 
 @Service

@@ -1,31 +1,17 @@
 package cn.vtyc.ehs.controller.wechatGalleryController;
 
 import cn.vtyc.ehs.controller.BaseController;
-import cn.vtyc.ehs.core.JSONResult;
 import cn.vtyc.ehs.core.Result;
-import cn.vtyc.ehs.dao.*;
-import cn.vtyc.ehs.dto.EhsDto;
-import cn.vtyc.ehs.entity.Ehs;
-import cn.vtyc.ehs.entity.Image;
+import cn.vtyc.ehs.dao.first.WechatGalleryDao;
+import cn.vtyc.ehs.dao.first.WechatInfoDao;
 import cn.vtyc.ehs.entity.WechatGallery;
-import cn.vtyc.ehs.service.DeptService;
-import cn.vtyc.ehs.util.MyFileUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Controller
 //@RequestMapping(value = "/weChatGallery")
@@ -39,7 +25,6 @@ public class WechatGalleryController extends BaseController {
 
     @RequestMapping(value = "/weChatGallery")
     public String list(Model model,@RequestParam Integer type){
-//        System.out.println(wechatInfoDao.selectWechatInfoByType(type));
         model.addAttribute("info",wechatInfoDao.selectWechatInfoByType(type) );
         model.addAttribute("images",wechatGalleryDao.selectWechatGalleryByType(type) );
         model.addAttribute("carousels",wechatInfoDao.selectWechatInfoByType(type).getCarousel().split("\\|"));

@@ -1,21 +1,15 @@
 package cn.vtyc.ehs.controller;
 
-import cn.vtyc.ehs.core.BusinessException;
 import cn.vtyc.ehs.core.JSONResult;
 import cn.vtyc.ehs.core.Result;
-import cn.vtyc.ehs.dao.AccidentTypeDao;
-import cn.vtyc.ehs.dao.DeptmentDao;
-import cn.vtyc.ehs.dao.EhsDao;
-import cn.vtyc.ehs.dao.ImageDao;
+import cn.vtyc.ehs.dao.first.AccidentTypeDao;
+import cn.vtyc.ehs.dao.first.EhsDao;
+import cn.vtyc.ehs.dao.first.ImageDao;
 import cn.vtyc.ehs.dto.EhsDto;
 import cn.vtyc.ehs.entity.Ehs;
 import cn.vtyc.ehs.entity.Image;
 import cn.vtyc.ehs.service.DeptService;
-import cn.vtyc.ehs.util.AjaxUtil;
 import cn.vtyc.ehs.util.MyFileUtil;
-import cn.vtyc.ehs.util.SpringContextUtil;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +26,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
-import static cn.vtyc.ehs.core.ErrorCode.HR_INTERFACE_ERROR;
 
 @Controller
 @RequestMapping(value = "/employee")

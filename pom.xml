@@ -74,6 +74,13 @@
 			<version>8.0.13</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>7.0.0.jre8</version>
+			<!--<scope>test</scope>-->
+		</dependency>
+
 		<!--devtools热部署-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

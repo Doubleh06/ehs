@@ -3,14 +3,12 @@ package cn.vtyc.ehs.controller;
 import cn.vtyc.ehs.core.JSONResult;
 import cn.vtyc.ehs.core.Result;
 import cn.vtyc.ehs.core.jqGrid.JqGridResult;
-import cn.vtyc.ehs.dao.AccidentLevelDao;
-import cn.vtyc.ehs.dao.AccidentTypeDao;
-import cn.vtyc.ehs.dao.ActionDao;
-import cn.vtyc.ehs.dao.EhsDao;
+import cn.vtyc.ehs.dao.first.AccidentLevelDao;
+import cn.vtyc.ehs.dao.first.AccidentTypeDao;
+import cn.vtyc.ehs.dao.first.EhsDao;
 import cn.vtyc.ehs.dto.EhsJqGridParam;
 
 import cn.vtyc.ehs.entity.Ehs;
-import cn.vtyc.ehs.service.DeptService;
 import cn.vtyc.ehs.service.EhsService;
 
 import com.alibaba.fastjson.JSONObject;

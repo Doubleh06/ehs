@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan(basePackages = "cn.vtyc.ehs.dao")
+@MapperScan(basePackages = "cn.vtyc.ehs.dao.*")
 @EnableScheduling
 public class EhsApplication {
 

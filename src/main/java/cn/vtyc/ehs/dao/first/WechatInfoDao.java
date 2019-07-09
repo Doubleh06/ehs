@@ -1,4 +1,4 @@
-package cn.vtyc.ehs.dao;
+package cn.vtyc.ehs.dao.first;
 
 import cn.vtyc.ehs.core.BaseDao;
 import cn.vtyc.ehs.entity.WechatGallery;

@@ -1,6 +1,6 @@
 package cn.vtyc.ehs.security;
 
-import cn.vtyc.ehs.dao.MenuDao;
+import cn.vtyc.ehs.dao.first.MenuDao;
 import cn.vtyc.ehs.entity.Menu;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;

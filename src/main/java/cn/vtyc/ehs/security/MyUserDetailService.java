@@ -1,8 +1,8 @@
 package cn.vtyc.ehs.security;
 
 
-import cn.vtyc.ehs.dao.RoleDao;
-import cn.vtyc.ehs.dao.UserDao;
+import cn.vtyc.ehs.dao.first.RoleDao;
+import cn.vtyc.ehs.dao.first.UserDao;
 import cn.vtyc.ehs.entity.Menu;
 import cn.vtyc.ehs.entity.Role;
 import cn.vtyc.ehs.entity.User;
