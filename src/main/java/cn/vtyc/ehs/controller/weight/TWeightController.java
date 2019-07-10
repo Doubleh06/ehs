@@ -112,6 +112,7 @@ public class TWeightController extends BaseController {
             }
         }
         HSSFRow header2 = sheet.createRow(tWeightList.size()+2);
+        double sum = 0;
         for (int i = 0; i < columns2.length; i++) {
             header2.createCell(i).setCellValue(columns2[i]);
         }
@@ -121,7 +122,11 @@ public class TWeightController extends BaseController {
                 row.createCell(0).setCellValue(tWeightSumList.get(i).get("FMaterial").toString());
                 row.createCell(1).setCellValue(tWeightSumList.get(i).get("FWeight").toString());
             }
+            sum += Double.parseDouble(tWeightSumList.get(i).get("FWeight").toString());
         }
+        HSSFRow row = sheet.createRow(tWeightList.size() + tWeightSumList.size() + 4);
+        row.createCell(0).setCellValue("合计");
+        row.createCell(1).setCellValue(sum);
 
         OutputStream output = response.getOutputStream();
         response.reset();
