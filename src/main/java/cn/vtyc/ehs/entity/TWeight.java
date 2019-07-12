@@ -9,7 +9,7 @@ import java.util.Date;
 @Table(name = "tWeight")
 public class TWeight extends BaseEntity {
     private String fmaterial;
-    private Integer fweight;
+    private String fweight;
     private Integer ftare;
     private Date fdatetime;
 }
