@@ -70,7 +70,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         //对以下路径忽略过滤
-        web.ignoring().antMatchers("/static/**", "/login", "/remote/**", "/test/**", "/checkextuser","/employee/**","/weChatGallery/**");
+        web.ignoring().antMatchers("/static/**", "/login", "/remote/**", "/test/**", "/checkextuser","/employee/**","/weChatGallery/**","/award/**");
     }
 
     @Override
